@@ -1,0 +1,17 @@
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+.aboutDesc {
+  font-size: 1.3rem;
+}
+
+.image {
+  width: 305px;
+  height: auto;
+}

@@ -11,7 +11,7 @@ const Intro = () => {
 
   return (
     <div
-      id="#intro"
+      id="intro"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "center",
@@ -19,7 +19,7 @@ const Intro = () => {
         backgroundSize: "cover",
         color: "white",
       }}
-      className={`${styles.container} ${stylesMain.innerSpacing}`}>
+      className={stylesMain.innerSpacing}>
       <Navbar />
       <Row align="middle">
         <Col span={15}>

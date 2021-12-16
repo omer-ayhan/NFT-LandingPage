@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "../components/About";
 import Intro from "../components/Intro";
 import styles from "../styles/Home.module.css";
 
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main className={styles.container}>
         <Intro />
+        <About />
       </main>
     </div>
   );

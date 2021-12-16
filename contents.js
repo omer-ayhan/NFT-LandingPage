@@ -47,7 +47,10 @@ export default {
     introCard: "/images/card/card.png",
     imageBtn: "/images/button/button.png",
   },
-  about: {},
+  about: {
+    backgroundImage: "/images/about/bg_about.jpg",
+    aboutCard: "/images/card/card.png",
+  },
   roadmap: {},
   faq: {},
   team: {},
