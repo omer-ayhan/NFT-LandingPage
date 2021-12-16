@@ -1,0 +1,73 @@
+@import "/styles/globals.css";
+
+.logo {
+  width: 120px;
+  height: 30px;
+}
+
+.navLinksContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLinks {
+  margin: 0 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.info {
+  max-width: 110px;
+  height: auto;
+  margin: 0 15px;
+}
+
+.bottomArrow {
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  height: 55px;
+}
+
+.socialLinksContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.iconImage {
+  height: 40px;
+}
+
+.iconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.socialLinks {
+  margin: 0 10px;
+}
+
+.rightButton {
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 140px;
+  height: "auto";
+}
+
+.rightButtonContainer {
+  cursor: pointer;
+}
+
+.keybaseIcon {
+  height: 60px;
+}

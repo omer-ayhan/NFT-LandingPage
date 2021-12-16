@@ -2,7 +2,7 @@
   "name": "nft_landing",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 192.168.1.124",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
