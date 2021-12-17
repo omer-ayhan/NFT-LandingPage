@@ -1,0 +1,10 @@
+.titleImage {
+  max-width: 310px;
+  height: auto;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 130px;
+}

@@ -1,0 +1,17 @@
+.dotTitle {
+  color: white;
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.dotContainer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+}

@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+}
+
+.imageContainer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  min-height: 300px;
+  display: grid;
+  place-content: center;
+}
+
+.avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.9;
+  color: #cdcdcd;
+  margin: 0 37px;
+}

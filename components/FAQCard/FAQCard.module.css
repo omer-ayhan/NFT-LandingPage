@@ -1,0 +1,33 @@
+.title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.listItem {
+  font-size: 0.85rem;
+  color: #969696;
+  font-weight: 500;
+}
+.effect {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 85px;
+}
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25%;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+}
+
+.dotText {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+}

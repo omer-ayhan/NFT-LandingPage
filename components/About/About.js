@@ -33,10 +33,11 @@ const About = () => {
       <Row align="middle" gutter={10}>
         <Col span={16}>
           <p className={styles.aboutDesc}>
-            Lorem Ipsum is simply Vandalism text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type Street Art. It has survived not only
+            Lorem Ipsum is simply <b style={{ color: "red" }}>Vandalism</b> text
+            of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type{" "}
+            <b style={{ color: "red" }}>Street Art.</b> It has survived not only
             five centuries, but also he leap into electronic typesetting,
             remaining essentially unchanged.
           </p>
