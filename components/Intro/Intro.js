@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
 
 import Navbar from "../Navbar";
 import styles from "./Intro.module.css";
 import contents from "../../contents";
 import stylesMain from "../../styles/Home.module.css";
-import Timer from "../Timer";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
+import TimerMain from "../Timer/TimerMain";
 
 const Intro = () => {
   const { backgroundImage, introCard, imageBtn } = contents.intro;
+
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 100) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   return (
     <div
       id="intro"
       style={{
+        paddingTop: scrolled ? "125px" : "0px",
+
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -22,7 +38,11 @@ const Intro = () => {
         color: "white",
       }}
       className={stylesMain.innerSpacing}>
-      <Navbar />
+      <Row justify="center" align="middle">
+        <Col span={24} align="middle" justify="center">
+          <Navbar scrolled={scrolled} />
+        </Col>
+      </Row>
       <Row align="middle" justify="center">
         <Col xs={{ order: 2 }} lg={{ span: 15, order: 1 }}>
           <h1 className={styles.title}>
@@ -57,7 +77,7 @@ const Intro = () => {
         </Col>
       </Row>
       <Row align="middle" justify="center">
-        <Timer setDays={1} />
+        <TimerMain />
         <Col span={24} align="middle">
           <SmoothScroll
             toId="roadmap"

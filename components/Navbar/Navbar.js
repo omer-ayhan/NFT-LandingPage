@@ -1,6 +1,6 @@
 import { Button, Col, Drawer, Row } from "antd";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 
 import contents from "../../contents";
@@ -8,14 +8,35 @@ import SmoothScroll from "../ScrollUtils/SmoothScroll";
 import styles from "./Navbar.module.css";
 import MobileMenu from "./MobileMenu";
 
-export default function Navbar() {
+export default function Navbar({ scrolled }) {
   const { logo, navLinks, socialLinks, rightButton } = contents.navbar;
 
   return (
-    <div>
+    <div
+      style={{
+        ...(scrolled
+          ? {
+              width: "80%",
+              padding: "0px 60px 0 0",
+              position: "fixed",
+              top: 0,
+              backgroundColor: "rgb(0 0 0 / 90%)",
+              zIndex: 9000,
+            }
+          : {}),
+        transition: "0.5s ease",
+      }}>
       <Row align="middle" justify="space-around">
         <Col span={3} justify="middle" align="middle" gutter={1}>
-          <img className={styles.logo} src={logo.url} alt="Logo" />
+          <SmoothScroll
+            style={{
+              paddingLeft: "0px",
+            }}
+            toId={"intro"}
+            duration={1500}
+            className={styles.navLinks}>
+            <img className={styles.logo} src={logo.url} alt="Logo" />
+          </SmoothScroll>
         </Col>
         <Col span={13} justify="middle" className={styles.desktopContainer}>
           <div className={styles.navLinksContainer}>
@@ -30,7 +51,7 @@ export default function Navbar() {
             ))}
           </div>
         </Col>
-        <Col span={7} className={styles.desktopContainer}>
+        <Col span={8} className={styles.desktopContainer}>
           <div className={styles.socialLinksContainer}>
             <img
               className={styles.info}
