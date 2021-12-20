@@ -60,3 +60,17 @@ a:hover {
 .ant-timeline-item-head {
   background-color: transparent;
 }
+
+.vertical-timeline-element-icon {
+  box-shadow: none;
+}
+
+.vertical-timeline::before {
+  background-color: #ff0000;
+}
+
+.vertical-timeline-element-icon.bounce-in {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}

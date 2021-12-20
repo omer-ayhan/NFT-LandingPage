@@ -5,12 +5,15 @@ import styles from "./Roadmap.module.css";
 import stylesMain from "../../styles/Home.module.css";
 import contents from "../../contents";
 import SectionTitle from "../SectionTitle";
-import Timeline from "./Timeline";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+
+import TimelineCard from "../TimelineCard";
 
 const { useBreakpoint } = Grid;
 
 const Roadmap = () => {
-  const { titleImage, backgroundImage, desc } = contents.roadmap;
+  const { titleImage, backgroundImage, desc, timelines, timelineDot } =
+    contents.roadmap;
   const screen = useBreakpoint();
 
   return (
@@ -25,7 +28,25 @@ const Roadmap = () => {
       }}
       className={` ${stylesMain.innerSpacing} ${styles.container}`}>
       <SectionTitle titleImage={titleImage} desc={desc} />
-      {(screen.xs || screen.sm || screen.md) && !screen.lg ? (
+      <VerticalTimeline>
+        {timelines.map(({ title, desc }, index) => (
+          <TimelineCard
+            timelineDot={
+              <div
+                className={styles.dotContainer}
+                style={{
+                  backgroundImage: `url(${timelineDot})`,
+                }}>
+                <span className={styles.dotTitle}>Q{index + 1}</span>
+              </div>
+            }
+            iconStyle={{ boxShadow: "none" }}
+            title={title}
+            desc={desc}
+          />
+        ))}
+      </VerticalTimeline>
+      {/* {(screen.xs || screen.sm || screen.md) && !screen.lg ? (
         <Timeline
           dotStyle={{
             marginLeft: "20px",
@@ -37,7 +58,7 @@ const Roadmap = () => {
         />
       ) : (
         <Timeline timelineMode="alternate" />
-      )}
+      )} */}
     </div>
   );
 };
