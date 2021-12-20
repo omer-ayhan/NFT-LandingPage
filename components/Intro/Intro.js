@@ -23,21 +23,19 @@ const Intro = () => {
       }}
       className={stylesMain.innerSpacing}>
       <Navbar />
-      {/* <Row align="middle">
-        <Col span={15}>
+      <Row align="middle" justify="center">
+        <Col xs={{ order: 2 }} lg={{ span: 15, order: 1 }}>
           <h1 className={styles.title}>
             Discover rare <br /> digital art <br /> and collect{" "}
             <b
               style={{
+                padding: "0 10px",
                 color: "red",
-                position: "relative",
-                zIndex: "10",
+                backgroundImage: 'url("/images/intro/arrow_bg.svg")',
+                backgroundPosition: "center center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "140px",
               }}>
-              <img
-                className={styles.nftArrow}
-                src="/images/intro/arrow_bg.svg"
-                alt=""
-              />
               NFTs
             </b>
           </h1>
@@ -47,7 +45,7 @@ const Intro = () => {
             ever since the 1500s.
           </p>
         </Col>
-        <Col span={9}>
+        <Col xs={{ order: 1 }} lg={{ span: 9, order: 2 }}>
           <img className={styles.image} src={introCard} alt="intro" />
         </Col>
       </Row>
@@ -81,7 +79,7 @@ const Intro = () => {
             <img className={styles.exploreBtn} src={imageBtn} alt="button" />
           </SmoothScroll>
         </Col>
-      </Row> */}
+      </Row>
     </div>
   );
 };

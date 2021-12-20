@@ -23,3 +23,12 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 440px) {
+  .timerTitle {
+    font-size: 1.05rem;
+  }
+  .timer {
+    line-height: 0.95;
+  }
+}
