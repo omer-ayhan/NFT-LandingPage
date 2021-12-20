@@ -31,6 +31,7 @@ const Roadmap = () => {
       <VerticalTimeline>
         {timelines.map(({ title, desc }, index) => (
           <TimelineCard
+            key={`${index}_?__${index}`}
             timelineDot={
               <div
                 className={styles.dotContainer}
@@ -46,19 +47,6 @@ const Roadmap = () => {
           />
         ))}
       </VerticalTimeline>
-      {/* {(screen.xs || screen.sm || screen.md) && !screen.lg ? (
-        <Timeline
-          dotStyle={{
-            marginLeft: "20px",
-          }}
-          cardStyle={{
-            margin: "0 0 0 50px",
-          }}
-          timelineMode="left"
-        />
-      ) : (
-        <Timeline timelineMode="alternate" />
-      )} */}
     </div>
   );
 };

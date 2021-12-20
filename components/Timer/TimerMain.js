@@ -22,7 +22,6 @@ function TimerMain() {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const [year] = useState(new Date().getFullYear());
 
   useEffect(() => {
     setTimeout(() => {
@@ -47,7 +46,7 @@ function TimerMain() {
   const { days, hours, minutes, seconds } = timeLeft;
   return (
     <>
-      {timerComponents.length ? (
+      {!!timerComponents.length ? (
         <>
           <Col
             xs={{ span: 6 }}
