@@ -31,7 +31,7 @@ const Intro = () => {
               style={{
                 padding: "10px",
                 color: "red",
-                backgroundImage: 'url("/images/intro/arrow_bg.svg")',
+                backgroundImage: "url(/images/intro/arrow_bg.svg)",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "140px",

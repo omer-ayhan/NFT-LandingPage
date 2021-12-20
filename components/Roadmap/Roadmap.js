@@ -13,8 +13,6 @@ const Roadmap = () => {
   const { titleImage, backgroundImage, desc } = contents.roadmap;
   const screen = useBreakpoint();
 
-  console.log(screen);
-
   return (
     <div
       id="roadmap"

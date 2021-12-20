@@ -23,7 +23,7 @@ export default function FAQ() {
       <SectionTitle titleImage={titleImage} desc={desc} />
       <Row>
         {faqCards.map(({ title, desc }, index) => (
-          <Col span={24}>
+          <Col key={`${index}!__#`} span={24}>
             <FAQCard title={title} desc={desc} dotText={`Q${index + 1}`} />
           </Col>
         ))}

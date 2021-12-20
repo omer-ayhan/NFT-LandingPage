@@ -62,12 +62,13 @@ export default function MobileMenu() {
           <Col span={24} justify="middle" align="start" gutter={1}>
             {socialLinks.map(({ icon, link }, index) => (
               <span
+                key={`${index}#!!#${icon}`}
                 style={{
                   position: "relative",
                   margin: "0 5px",
                 }}>
                 {icon.includes("/images/navbar/keybase.png") ? (
-                  <a href={link} key={`${index}##${icon}`} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     <img src={icon} alt="icon" />
                     <img
                       style={{
@@ -81,7 +82,7 @@ export default function MobileMenu() {
                     />
                   </a>
                 ) : (
-                  <img key={`${index}##${icon}`} src={icon} alt="icon" />
+                  <img key={`${index}#!__#${icon}`} src={icon} alt="icon" />
                 )}
               </span>
             ))}
@@ -112,7 +113,11 @@ export default function MobileMenu() {
         </Row>
         <Row align="middle" justify="space-around">
           {navLinks.map(({ link, name }, index) => (
-            <Col span={24} justify="middle" align="start">
+            <Col
+              key={`${index}##${link}`}
+              span={24}
+              justify="middle"
+              align="start">
               <div
                 style={{
                   margin: "5px 0",
@@ -123,8 +128,7 @@ export default function MobileMenu() {
                   style={{
                     color: "#fff",
                     fontSize: "1.5rem",
-                  }}
-                  key={`${index}##${link}`}>
+                  }}>
                   {name}
                 </SmoothScroll>
               </div>

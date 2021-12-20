@@ -24,7 +24,7 @@ export default function Navbar() {
                 toId={link}
                 duration={1500}
                 className={styles.navLinks}
-                key={`${index}##${link}`}>
+                key={`${index}!##!${link}`}>
                 {name}
               </SmoothScroll>
             ))}
@@ -39,13 +39,13 @@ export default function Navbar() {
             />
 
             {socialLinks.map(({ icon, link }, index) => (
-              <span>
+              <span key={`${index}##${icon}`}>
                 {icon.includes("/images/navbar/keybase.png") ? (
                   <a
                     className={` ${styles.iconContainer}`}
                     href={link}
-                    key={`${index}##${icon}`}
-                    target="_blank">
+                    target="_blank"
+                    rel="noreferrer">
                     <img
                       className={`${styles.iconImage} ${styles.keybaseIcon}`}
                       src={icon}
@@ -59,7 +59,7 @@ export default function Navbar() {
                   </a>
                 ) : (
                   <img
-                    key={`${index}##${icon}`}
+                    key={`${index}#__#${icon}`}
                     className={`${styles.iconImage}`}
                     src={icon}
                     alt="icon"
