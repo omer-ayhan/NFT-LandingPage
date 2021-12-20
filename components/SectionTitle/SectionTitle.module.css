@@ -1,6 +1,5 @@
 .titleImage {
   max-width: 310px;
-  height: auto;
 }
 
 .description {
@@ -15,4 +14,10 @@
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 360px) {
+  .titleImage {
+    max-width: 260px;
+  }
 }

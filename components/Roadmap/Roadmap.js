@@ -1,15 +1,20 @@
 import React from "react";
-import { Timeline } from "antd";
+import { Grid } from "antd";
 
 import styles from "./Roadmap.module.css";
 import stylesMain from "../../styles/Home.module.css";
 import contents from "../../contents";
-import TimelineCard from "../TimelineCard";
 import SectionTitle from "../SectionTitle";
+import Timeline from "./Timeline";
+
+const { useBreakpoint } = Grid;
 
 const Roadmap = () => {
-  const { titleImage, backgroundImage, timelineDot, timelines, desc } =
-    contents.roadmap;
+  const { titleImage, backgroundImage, desc } = contents.roadmap;
+  const screen = useBreakpoint();
+
+  console.log(screen);
+
   return (
     <div
       id="roadmap"
@@ -22,23 +27,19 @@ const Roadmap = () => {
       }}
       className={` ${stylesMain.innerSpacing} ${styles.container}`}>
       <SectionTitle titleImage={titleImage} desc={desc} />
-      <Timeline mode="alternate">
-        {timelines.map(({ title, desc }, index) => (
-          <Timeline.Item
-            key={`${index}##${title}`}
-            dot={
-              <div
-                className={styles.dotContainer}
-                style={{
-                  backgroundImage: `url(${timelineDot})`,
-                }}>
-                <span className={styles.dotTitle}>Q{index + 1}</span>
-              </div>
-            }>
-            <TimelineCard title={title} desc={desc} />
-          </Timeline.Item>
-        ))}
-      </Timeline>
+      {(screen.xs || screen.sm || screen.md) && !screen.lg ? (
+        <Timeline
+          dotStyle={{
+            marginLeft: "20px",
+          }}
+          cardStyle={{
+            margin: "0 0 0 50px",
+          }}
+          timelineMode="left"
+        />
+      ) : (
+        <Timeline timelineMode="alternate" />
+      )}
     </div>
   );
 };

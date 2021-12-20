@@ -24,7 +24,10 @@ export default function Team() {
       <SectionTitle titleImage={titleImage} desc={desc} />
       <Row>
         {teamCards.map(({ avatarBg, avatar, desc, avatarStyle }, index) => (
-          <Col key={`${index}##__${index + 2}`} span={12} align="middle">
+          <Col
+            key={`${index}##__${index + 2}`}
+            lg={{ span: 12 }}
+            align="middle">
             <TeamCards
               avatarStyle={avatarStyle}
               backgroundImage={avatarBg}

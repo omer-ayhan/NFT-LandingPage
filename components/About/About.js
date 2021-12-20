@@ -19,19 +19,17 @@ const About = () => {
         color: "white",
       }}
       className={`${styles.container} ${stylesMain.innerSpacing}`}>
-      <Row align="middle">
-        <h1 className={styles.title}>
-          WANTED
-          <img
-            className={styles.titleImage}
-            src="/images/about/we-dont.svg"
-            alt=""
-          />
-        </h1>
-      </Row>
-      <Row align="middle" gutter={10}>
-        <Col span={16}>
-          <p className={styles.aboutDesc}>
+      <Row align="middle" justify="center" gutter={10}>
+        <Col xs={{ order: 2 }} lg={{ span: 16, order: 1 }}>
+          <h1 className={styles.title}>
+            WANTED
+            <img
+              className={styles.titleImage}
+              src="/images/about/we-dont.svg"
+              alt=""
+            />
+          </h1>
+          {/* <p className={styles.aboutDesc}>
             WDW is a movement created to lift the veil from the{" "}
             <span className={styles.textIcon}>world's </span>
             eyes. We believe that no one has the right to infringe on your
@@ -45,9 +43,9 @@ const About = () => {
             of a grand movement. This is your chance to create value for
             yourself and the world - get your WDW NFTs and play your part in the{" "}
             <span className={styles.evolutionWord}>evolution</span>.
-          </p>
+          </p> */}
         </Col>
-        <Col span={8}>
+        <Col xs={{ order: 1 }} lg={{ span: 8, order: 2 }}>
           <img src={aboutCard} alt="Vandalism" className={styles.image} />
         </Col>
       </Row>

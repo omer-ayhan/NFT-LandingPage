@@ -86,3 +86,36 @@
   width: 305px;
   height: auto;
 }
+
+@media (min-width: 992px) and (max-width: 1058px) {
+  .textIcon::before {
+    top: 0px;
+    left: -523px;
+  }
+}
+
+@media (min-width: 859px) and (max-width: 896px) {
+  .intelligenceWord::before {
+    top: 5px;
+    left: -619px;
+  }
+}
+@media (max-width: 470px) {
+  .image {
+    width: 320px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 355px) {
+  .image {
+    width: 280px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 330px) {
+  .image {
+    width: 230px;
+    margin-top: 20px;
+  }
+}

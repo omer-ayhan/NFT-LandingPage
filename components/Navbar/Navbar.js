@@ -15,9 +15,7 @@ export default function Navbar() {
     <div>
       <Row align="middle" justify="space-around">
         <Col span={3} justify="middle" align="middle" gutter={1}>
-          <SmoothScroll toId={logo.link} className={styles.navLinks}>
-            <img className={styles.logo} src={logo.url} alt="Logo" />
-          </SmoothScroll>
+          <img className={styles.logo} src={logo.url} alt="Logo" />
         </Col>
         <Col span={13} justify="middle" className={styles.desktopContainer}>
           <div className={styles.navLinksContainer}>

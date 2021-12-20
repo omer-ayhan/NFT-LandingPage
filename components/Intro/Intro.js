@@ -29,7 +29,7 @@ const Intro = () => {
             Discover rare <br /> digital art <br /> and collect{" "}
             <b
               style={{
-                padding: "0 10px",
+                padding: "10px",
                 color: "red",
                 backgroundImage: 'url("/images/intro/arrow_bg.svg")',
                 backgroundPosition: "center center",

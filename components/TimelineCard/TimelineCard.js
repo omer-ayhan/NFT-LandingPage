@@ -3,7 +3,7 @@ import { Card } from "antd";
 
 import styles from "./TimelineCard.module.css";
 
-export default function TimelineCard({ title, desc }) {
+export default function TimelineCard({ title, desc, cardStyle = {} }) {
   return (
     <Card
       style={{
@@ -12,6 +12,7 @@ export default function TimelineCard({ title, desc }) {
         borderRadius: "10px",
         backgroundColor: "rgba(0, 0, 0, 0.5)",
         maxWidth: "400px",
+        ...cardStyle,
       }}
       bodyStyle={{
         padding: "19px",

@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import About from "../components/About";
 import FAQ from "../components/FAQ";
+import Footer from "../components/Footer/Footer";
 import Intro from "../components/Intro";
 import Roadmap from "../components/Roadmap";
 import Team from "../components/Team";
@@ -29,10 +30,11 @@ export default function Home() {
       </Head>
       <main className={styles.container}>
         <Intro />
-        {/* <About />
+        <About />
         <Roadmap />
         <FAQ />
-        <Team /> */}
+        <Team />
+        <Footer />
       </main>
     </div>
   );
