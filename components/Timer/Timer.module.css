@@ -1,0 +1,25 @@
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.timerTitle {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #a7a7a7;
+}
+
+.timer {
+  font-size: 3.3rem;
+  line-height: 1.1;
+  background: #ffffff;
+  background: -webkit-linear-gradient(to bottom, #ffffff 32%, #080808 100%);
+  background: -moz-linear-gradient(to bottom, #ffffff 32%, #080808 100%);
+  background: linear-gradient(to bottom, #ffffff 32%, #080808 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

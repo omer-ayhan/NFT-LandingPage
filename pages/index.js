@@ -12,6 +12,18 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Vandal NFT</title>
+        <link
+          rel="preload"
+          href="/fonts/Gilroy-Bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Gilroy-SemiBold.ttf"
+          as="font"
+          crossOrigin=""
+        />
         <meta name="description" content="Discover Vandal's latest NFTs" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

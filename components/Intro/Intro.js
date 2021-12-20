@@ -5,6 +5,7 @@ import Navbar from "../Navbar";
 import styles from "./Intro.module.css";
 import contents from "../../contents";
 import stylesMain from "../../styles/Home.module.css";
+import Timer from "../Timer";
 
 const Intro = () => {
   const { backgroundImage, introCard, imageBtn } = contents.intro;
@@ -28,7 +29,14 @@ const Intro = () => {
             <b
               style={{
                 color: "red",
+                position: "relative",
+                zIndex: "10",
               }}>
+              <img
+                className={styles.nftArrow}
+                src="/images/intro/arrow_bg.svg"
+                alt=""
+              />
               NFTs
             </b>
           </h1>
@@ -50,30 +58,7 @@ const Intro = () => {
         </Col>
       </Row>
       <Row align="middle" justify="center">
-        <Col span={3}>
-          <div className={styles.timerContainer}>
-            <p className={styles.timerTitle}>Days</p>
-            <h1 className={styles.timer}>01</h1>
-          </div>
-        </Col>
-        <Col span={3}>
-          <div className={styles.timerContainer}>
-            <p className={styles.timerTitle}>Hours</p>
-            <h1 className={styles.timer}>09</h1>
-          </div>
-        </Col>
-        <Col span={3}>
-          <div className={styles.timerContainer}>
-            <p className={styles.timerTitle}>Minutes</p>
-            <h1 className={styles.timer}>40</h1>
-          </div>
-        </Col>
-        <Col span={3}>
-          <div className={styles.timerContainer}>
-            <p className={styles.timerTitle}>Seconds</p>
-            <h1 className={styles.timer}>08</h1>
-          </div>
-        </Col>
+        <Timer setDays={1} />
         <Col span={24} align="middle">
           <a href="#" className={styles.discover}>
             <img

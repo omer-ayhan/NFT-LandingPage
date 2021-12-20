@@ -21,25 +21,30 @@ const About = () => {
       className={`${styles.container} ${stylesMain.innerSpacing}`}>
       <Row align="middle">
         <h1 className={styles.title}>
-          Who are the{" "}
-          <b
-            style={{
-              color: "red",
-            }}>
-            Vandals NFT
-          </b>
+          WANTED
+          <img
+            className={styles.titleImage}
+            src="/images/about/we-dont.svg"
+            alt=""
+          />
         </h1>
       </Row>
       <Row align="middle" gutter={10}>
         <Col span={16}>
           <p className={styles.aboutDesc}>
-            Lorem Ipsum is simply <b style={{ color: "red" }}>Vandalism</b> text
-            of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type{" "}
-            <b style={{ color: "red" }}>Street Art.</b> It has survived not only
-            five centuries, but also he leap into electronic typesetting,
-            remaining essentially unchanged.
+            WDW is a movement created to lift the veil from the{" "}
+            <span className={styles.textIcon}>world's </span>
+            eyes. We believe that no one has the right to infringe on your
+            freedom for the sake of{" "}
+            <span className={styles.securityWord}>security</span>, Mass
+            Surveillance is not justified by the need for{" "}
+            <span className={styles.intelligenceWord}>Intelligence</span>, that
+            your voice mustn't be quieted. To express these views and champion
+            the cause of freedom we bring you unique pieces of art, as NFTs,
+            that will stir your sense of liberty and bring about the beginning
+            of a grand movement. This is your chance to create value for
+            yourself and the world - get your WDW NFTs and play your part in the{" "}
+            <span className={styles.evolutionWord}>evolution</span>.
           </p>
         </Col>
         <Col span={8}>

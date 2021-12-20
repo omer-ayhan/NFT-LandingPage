@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import contents from "../../contents";
+import SmoothScroll from "../ScrollUtils/SmoothScroll";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -11,19 +12,20 @@ export default function Navbar() {
     <div>
       <Row align="middle">
         <Col span={3} justify="middle" align="middle" gutter={1}>
-          <a href={logo.link}>
+          <SmoothScroll toId={logo.link} className={styles.navLinks}>
             <img className={styles.logo} src={logo.url} alt="Logo" />
-          </a>
+          </SmoothScroll>
         </Col>
         <Col span={13} justify="middle">
           <div className={styles.navLinksContainer}>
             {navLinks.map(({ link, name }, index) => (
-              <a
+              <SmoothScroll
+                toId={link}
+                duration={1500}
                 className={styles.navLinks}
-                href={link}
                 key={`${index}##${link}`}>
                 {name}
-              </a>
+              </SmoothScroll>
             ))}
           </div>
         </Col>
@@ -37,27 +39,31 @@ export default function Navbar() {
 
             {socialLinks.map(({ icon, link }, index) => (
               <span>
-                <a
-                  className={` ${styles.iconContainer}`}
-                  href={link}
-                  key={`${index}##${icon}`}
-                  target="_blank">
-                  <img
-                    className={`${styles.iconImage} ${
-                      icon.includes("/images/navbar/keybase.png") &&
-                      styles.keybaseIcon
-                    }`}
-                    src={icon}
-                    alt="icon"
-                  />
-                  {icon.includes("/images/navbar/keybase.png") && (
+                {icon.includes("/images/navbar/keybase.png") ? (
+                  <a
+                    className={` ${styles.iconContainer}`}
+                    href={link}
+                    key={`${index}##${icon}`}
+                    target="_blank">
+                    <img
+                      className={`${styles.iconImage} ${styles.keybaseIcon}`}
+                      src={icon}
+                      alt="icon"
+                    />
                     <img
                       className={styles.bottomArrow}
                       src="/images/navbar/bottom_arrow.svg"
                       alt="arrow"
                     />
-                  )}
-                </a>
+                  </a>
+                ) : (
+                  <img
+                    key={`${index}##${icon}`}
+                    className={`${styles.iconImage}`}
+                    src={icon}
+                    alt="icon"
+                  />
+                )}
               </span>
             ))}
             <span

@@ -4,10 +4,81 @@
 }
 
 .title {
+  position: relative;
   font-size: 3.5rem;
+  color: red;
 }
 
+.titleImage {
+  position: absolute;
+  width: 120px;
+  top: -13px;
+  left: -60px;
+}
+
+.textIcon {
+  position: relative;
+}
+
+.textIcon::before {
+  content: "    ";
+  background-image: url(/images/about/your.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 35px 60px;
+  position: absolute;
+  top: -36px;
+  left: -26px;
+}
+.securityWord {
+  position: relative;
+}
+
+.securityWord::before {
+  content: "    ";
+  background-image: url(/images/about/money.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 29px 55px;
+  position: absolute;
+  top: -24px;
+  left: -9px;
+}
+
+.intelligenceWord {
+  position: relative;
+}
+.intelligenceWord::before {
+  content: "    ";
+  background-image: url(/images/about/security.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 29px 55px;
+  position: absolute;
+  top: -25px;
+  left: -9px;
+}
+
+.evolutionWord {
+  position: relative;
+}
+.evolutionWord::before {
+  content: "    ";
+  background-image: url(/images/about/revolution.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 27px 55px;
+  position: absolute;
+  top: -23px;
+  left: -9px;
+}
 .aboutDesc {
+  position: relative;
+  color: #7e7e7e;
   font-size: 1.3rem;
 }
 

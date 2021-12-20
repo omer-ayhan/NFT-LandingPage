@@ -2,24 +2,24 @@ export default {
   navbar: {
     logo: {
       url: "/images/navbar/LOGO.svg",
-      link: "#intro",
+      link: "intro",
     },
     navLinks: [
       {
         name: "Who is Vandal",
-        link: "#about",
+        link: "about",
       },
       {
         name: "Roadmap",
-        link: "#roadmap",
+        link: "roadmap",
       },
       {
         name: "FAQ",
-        link: "#faq",
+        link: "faq",
       },
       {
         name: "Team",
-        link: "#team",
+        link: "team",
       },
     ],
     socialLinks: [

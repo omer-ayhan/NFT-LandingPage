@@ -16,6 +16,10 @@
   margin: 0 15px;
   font-size: 0.95rem;
   font-weight: bold;
+  color: var(--gray);
+  cursor: pointer;
+}
+.navLinks:hover {
   color: var(--white);
 }
 
@@ -42,6 +46,7 @@
 
 .iconImage {
   height: 40px;
+  margin: 0 5px;
 }
 
 .iconContainer {
@@ -50,7 +55,6 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin: 0 5px;
 }
 
 .socialLinks {
