@@ -1,22 +1,25 @@
-import { Button, Col, Row } from "antd";
+import { Button, Col, Drawer, Row } from "antd";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { MenuOutlined } from "@ant-design/icons";
 
 import contents from "../../contents";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
 import styles from "./Navbar.module.css";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   const { logo, navLinks, socialLinks, rightButton } = contents.navbar;
+
   return (
     <div>
-      <Row align="middle">
+      <Row align="middle" justify="space-around">
         <Col span={3} justify="middle" align="middle" gutter={1}>
           <SmoothScroll toId={logo.link} className={styles.navLinks}>
             <img className={styles.logo} src={logo.url} alt="Logo" />
           </SmoothScroll>
         </Col>
-        <Col span={13} justify="middle">
+        <Col span={13} justify="middle" className={styles.desktopContainer}>
           <div className={styles.navLinksContainer}>
             {navLinks.map(({ link, name }, index) => (
               <SmoothScroll
@@ -29,7 +32,7 @@ export default function Navbar() {
             ))}
           </div>
         </Col>
-        <Col span={7}>
+        <Col span={7} className={styles.desktopContainer}>
           <div className={styles.socialLinksContainer}>
             <img
               className={styles.info}
@@ -81,6 +84,14 @@ export default function Navbar() {
               </span>
             </span>
           </div>
+        </Col>
+        <Col
+          className={styles.mobileMenu}
+          span={21}
+          justify="end"
+          align="end"
+          style={{ padding: "30px 0" }}>
+          <MobileMenu />
         </Col>
       </Row>
     </div>

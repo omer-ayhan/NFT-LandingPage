@@ -6,6 +6,7 @@ import styles from "./Intro.module.css";
 import contents from "../../contents";
 import stylesMain from "../../styles/Home.module.css";
 import Timer from "../Timer";
+import SmoothScroll from "../ScrollUtils/SmoothScroll";
 
 const Intro = () => {
   const { backgroundImage, introCard, imageBtn } = contents.intro;
@@ -22,7 +23,7 @@ const Intro = () => {
       }}
       className={stylesMain.innerSpacing}>
       <Navbar />
-      <Row align="middle">
+      {/* <Row align="middle">
         <Col span={15}>
           <h1 className={styles.title}>
             Discover rare <br /> digital art <br /> and collect{" "}
@@ -60,7 +61,10 @@ const Intro = () => {
       <Row align="middle" justify="center">
         <Timer setDays={1} />
         <Col span={24} align="middle">
-          <a href="#" className={styles.discover}>
+          <SmoothScroll
+            toId="roadmap"
+            duration={1500}
+            className={styles.discover}>
             <img
               style={{
                 width: "20px",
@@ -71,13 +75,13 @@ const Intro = () => {
               alt="discover"
             />{" "}
             Discover Artworks
-          </a>
+          </SmoothScroll>
 
-          <a href="#roadmap">
+          <SmoothScroll toId="roadmap" duration={1500}>
             <img className={styles.exploreBtn} src={imageBtn} alt="button" />
-          </a>
+          </SmoothScroll>
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 };

@@ -29,10 +29,10 @@ export default function Home() {
       </Head>
       <main className={styles.container}>
         <Intro />
-        <About />
+        {/* <About />
         <Roadmap />
         <FAQ />
-        <Team />
+        <Team /> */}
       </main>
     </div>
   );

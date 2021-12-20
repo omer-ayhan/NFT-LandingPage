@@ -29,6 +29,7 @@
 .exploreBtn {
   width: 230px;
   height: "auto";
+  cursor: pointer;
 }
 
 .discover {
@@ -43,6 +44,7 @@
   top: 0;
   left: 0;
   transform: rotate(270deg);
+  cursor: pointer;
 }
 
 .nftArrow {

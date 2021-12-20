@@ -44,6 +44,10 @@
   height: 100%;
 }
 
+.mobileMenu {
+  display: none;
+}
+
 .iconImage {
   height: 40px;
   margin: 0 5px;
@@ -74,4 +78,19 @@
 
 .keybaseIcon {
   height: 60px;
+}
+
+@media (max-width: 1270px) {
+  .info {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .desktopContainer {
+    display: none;
+  }
+  .mobileMenu {
+    display: block;
+  }
 }

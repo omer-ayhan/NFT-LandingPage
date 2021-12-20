@@ -6,3 +6,27 @@
 .innerSpacing {
   padding: 0 180px;
 }
+
+@media (max-width: 1140px) {
+  .innerSpacing {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .innerSpacing {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .innerSpacing {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 300px) {
+  .innerSpacing {
+    padding: 0 20px;
+  }
+}
