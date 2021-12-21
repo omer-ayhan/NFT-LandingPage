@@ -29,7 +29,7 @@ const About = () => {
               alt=""
             />
           </h1>
-          <p className={styles.aboutDesc}>
+          {/* <p className={styles.aboutDesc}>
             WDW is a movement created to lift the veil from the{" "}
             <span className={styles.textIcon}>world's </span>
             eyes. We believe that no one has the right to infringe on your
@@ -43,7 +43,7 @@ const About = () => {
             of a grand movement. This is your chance to create value for
             yourself and the world - get your WDW NFTs and play your part in the{" "}
             <span className={styles.evolutionWord}>evolution</span>.
-          </p>
+          </p> */}
         </Col>
         <Col xs={{ order: 1 }} lg={{ span: 8, order: 2 }}>
           <img src={aboutCard} alt="Vandalism" className={styles.image} />

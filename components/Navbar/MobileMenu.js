@@ -46,9 +46,11 @@ export default function MobileMenu() {
         destroyOnClose
         headerStyle={{
           backgroundColor: "#111",
+          zIndex: "99999999999",
         }}
         bodyStyle={{
           backgroundColor: "#111",
+          zIndex: "99999999999",
         }}
         placement="right"
         onClose={onClose}

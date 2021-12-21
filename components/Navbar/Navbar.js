@@ -21,7 +21,7 @@ export default function Navbar({ scrolled }) {
               position: "fixed",
               top: 0,
               backgroundColor: "rgb(0 0 0 / 90%)",
-              zIndex: 9000,
+              zIndex: 1,
             }
           : {}),
         transition: "0.5s ease",

@@ -5,6 +5,7 @@ import SectionTitle from "../SectionTitle";
 import stylesMain from "../../styles/Home.module.css";
 import contents from "../../contents";
 import TeamCards from "../TeamCards";
+import Footer from "../Footer";
 
 export default function Team() {
   const { backgroundImage, titleImage, desc, teamCards } = contents.team;
@@ -18,7 +19,6 @@ export default function Team() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         color: "white",
-        paddingBottom: "90px",
       }}
       className={` ${stylesMain.innerSpacing}`}>
       <SectionTitle titleImage={titleImage} desc={desc} />
@@ -36,6 +36,11 @@ export default function Team() {
             />
           </Col>
         ))}
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Footer />
+        </Col>
       </Row>
     </div>
   );

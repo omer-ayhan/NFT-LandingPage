@@ -1,0 +1,21 @@
+.iconImage {
+  height: 55px;
+  margin: 0 5px;
+}
+
+.keybaseIcon {
+  height: 75px;
+}
+
+.bottomArrow {
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  height: 55px;
+}
+
+@media (max-width: 991px) {
+  .bottomArrow {
+    display: none;
+  }
+}

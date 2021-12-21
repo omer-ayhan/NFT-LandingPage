@@ -141,4 +141,22 @@ export default {
       },
     ],
   },
+  footer: {
+    socialLinks: [
+      {
+        type: "image",
+        icon: "/images/footer/discord.svg",
+      },
+      {
+        type: "image",
+        icon: "/images/footer/telegram.svg",
+      },
+      {
+        type: "link",
+        icon: "/images/footer/keybase.svg",
+        link: "https://keybase.io/",
+      },
+    ],
+    infoImage: "/images/footer/info.svg",
+  },
 };

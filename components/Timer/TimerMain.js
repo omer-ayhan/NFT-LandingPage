@@ -96,7 +96,48 @@ function TimerMain() {
           </Col>
         </>
       ) : (
-        <span>Time's up!</span>
+        <>
+          <Col
+            xs={{ span: 6 }}
+            sm={{ span: 5 }}
+            md={{ span: 4 }}
+            lg={{ span: 3 }}>
+            <div className={styles.timerContainer}>
+              <p className={styles.timerTitle}>Days</p>
+              <h1 className={styles.timer}>00</h1>
+            </div>
+          </Col>
+          <Col
+            xs={{ span: 6 }}
+            sm={{ span: 5 }}
+            md={{ span: 4 }}
+            lg={{ span: 3 }}>
+            <div className={styles.timerContainer}>
+              <p className={styles.timerTitle}>Hours</p>
+              <h1 className={styles.timer}>00</h1>
+            </div>
+          </Col>
+          <Col
+            xs={{ span: 6 }}
+            sm={{ span: 5 }}
+            md={{ span: 4 }}
+            lg={{ span: 3 }}>
+            <div className={styles.timerContainer}>
+              <p className={styles.timerTitle}>Minutes</p>
+              <h1 className={styles.timer}>00</h1>
+            </div>
+          </Col>
+          <Col
+            xs={{ span: 6 }}
+            sm={{ span: 5 }}
+            md={{ span: 4 }}
+            lg={{ span: 3 }}>
+            <div className={styles.timerContainer}>
+              <p className={styles.timerTitle}>Seconds</p>
+              <h1 className={styles.timer}>00</h1>
+            </div>
+          </Col>
+        </>
       )}
     </>
   );

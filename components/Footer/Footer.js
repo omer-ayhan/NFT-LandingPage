@@ -1,19 +1,26 @@
 import { Col, Row } from "antd";
 import React from "react";
+
+import contents from "../../contents";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
+import styles from "../Navbar/Navbar.module.css";
+import stylesFooter from "./Footer.module.css";
 
 export default function Footer() {
+  const { socialLinks } = contents.navbar;
+
   return (
     <div
       style={{
-        backgroundColor: "#000",
+        padding: "24px 50px",
       }}>
-      <Row>
+      <Row align="middle">
         <Col
           style={{
             padding: "20px 0",
           }}
-          span={24}
+          xs={{ span: 24 }}
+          lg={{ span: 8 }}
           justify="center"
           align="middle">
           <SmoothScroll
@@ -24,6 +31,70 @@ export default function Footer() {
             }}>
             <img src="/images/navbar/LOGO.svg" alt="" />
           </SmoothScroll>
+        </Col>
+        <Col xs={{ span: 24 }} lg={{ span: 8 }}>
+          <div className={styles.socialLinksContainer}>
+            <img
+              className={styles.info}
+              src="/images/navbar/info.svg"
+              alt="info"
+            />
+
+            {socialLinks.map(({ icon, link }, index) => (
+              <span key={`${index}##${icon}`}>
+                {icon.includes("/images/navbar/keybase.png") ? (
+                  <a
+                    className={` ${styles.iconContainer}`}
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer">
+                    <img
+                      className={`${stylesFooter.iconImage} ${stylesFooter.keybaseIcon}`}
+                      src={icon}
+                      alt="icon"
+                    />
+                    <img
+                      className={stylesFooter.bottomArrow}
+                      src="/images/navbar/bottom_arrow.svg"
+                      alt="arrow"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    key={`${index}#__#${icon}`}
+                    className={`${stylesFooter.iconImage}`}
+                    src={icon}
+                    alt="icon"
+                  />
+                )}
+              </span>
+            ))}
+          </div>
+        </Col>
+        <Col xs={{ span: 24 }} lg={{ span: 8 }} align="end" justify="end">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+            <h1
+              style={{
+                lineHeight: "1",
+              }}>
+              Follow
+            </h1>
+            <a href="#" target="_blank" rel="noreferrer">
+              <img
+                style={{
+                  width: "70px",
+                }}
+                src="/images/footer/twitter.png"
+                alt="twitter"
+              />
+            </a>
+          </div>
         </Col>
       </Row>
     </div>

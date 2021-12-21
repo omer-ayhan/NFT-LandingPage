@@ -34,7 +34,6 @@ export default function Home() {
         <Roadmap />
         <FAQ />
         <Team />
-        <Footer />
       </main>
     </div>
   );
