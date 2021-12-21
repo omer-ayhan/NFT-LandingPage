@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vandal NFT</title>
         <link
           rel="preload"
           href="/fonts/Gilroy-Bold.ttf"
@@ -25,8 +24,13 @@ export default function Home() {
           as="font"
           crossOrigin=""
         />
-        <meta name="description" content="Discover Vandal's latest NFTs" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <meta name="description" content="Mint your WDW Citizens NFT" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <title>WDW Citizens</title>
       </Head>
       <main className={styles.container}>
         <Intro />

@@ -23,6 +23,12 @@ body {
   --red: #663e3e;
   --white: #ffffff;
   --gray: #838383;
+  --primary: #ebc908;
+  --primary-text: #c20b0b;
+  --secondary: #c20b0b;
+  --secondary-text: #ffffff;
+  --accent: #505050;
+  --accent-text: #ffffff;
 }
 
 h1,

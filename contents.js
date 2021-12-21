@@ -45,6 +45,7 @@ export default {
     },
   },
   intro: {
+    mintState: false,
     backgroundImage: "/images/bg_def.jpg",
     introCard: "/images/card/card.png",
     imageBtn: "/images/button/button.png",

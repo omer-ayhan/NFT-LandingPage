@@ -7,9 +7,10 @@ import contents from "../../contents";
 import stylesMain from "../../styles/Home.module.css";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
 import TimerMain from "../Timer/TimerMain";
+import Link from "next/link";
 
 const Intro = () => {
-  const { backgroundImage, introCard, imageBtn } = contents.intro;
+  const { backgroundImage, introCard, imageBtn, mintState } = contents.intro;
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -94,10 +95,18 @@ const Intro = () => {
             />{" "}
             Discover Artworks
           </SmoothScroll>
-
-          <SmoothScroll toId="roadmap" duration={1500}>
-            <img className={styles.exploreBtn} src={imageBtn} alt="button" />
-          </SmoothScroll>
+          {mintState ? (
+            <Link href="/MintPage" shallow>
+              <img className={styles.exploreBtn} src={imageBtn} alt="button" />
+            </Link>
+          ) : (
+            <img
+              onClick={() => alert("Mint page disabled for maintenance")}
+              className={styles.exploreBtn}
+              src={imageBtn}
+              alt="button"
+            />
+          )}
         </Col>
       </Row>
     </div>
