@@ -29,21 +29,54 @@ const About = () => {
               alt=""
             />
           </h1>
-          {/* <p className={styles.aboutDesc}>
+          <p className={styles.aboutDesc}>
             WDW is a movement created to lift the veil from the{" "}
-            <span className={styles.textIcon}>world's </span>
+            <span
+              style={{
+                background: "url(/images/about/your.png) no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                padding: "31px 13px 0px 0px",
+              }}>
+              world's
+            </span>
             eyes. We believe that no one has the right to infringe on your
             freedom for the sake of{" "}
-            <span className={styles.securityWord}>security</span>, Mass
-            Surveillance is not justified by the need for{" "}
-            <span className={styles.intelligenceWord}>Intelligence</span>, that
-            your voice mustn't be quieted. To express these views and champion
-            the cause of freedom we bring you unique pieces of art, as NFTs,
-            that will stir your sense of liberty and bring about the beginning
-            of a grand movement. This is your chance to create value for
-            yourself and the world - get your WDW NFTs and play your part in the{" "}
-            <span className={styles.evolutionWord}>evolution</span>.
-          </p> */}
+            <span
+              style={{
+                background: "url(/images/about/money.png) no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                padding: "25px 10px 0px 0px",
+              }}>
+              security
+            </span>
+            , Mass Surveillance is not justified by the need for{" "}
+            <span
+              style={{
+                background: "url(/images/about/security.png) no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                padding: "25px 4px 0px 0px",
+              }}>
+              Intelligence
+            </span>
+            , that your voice mustn't be quieted. To express these views and
+            champion the cause of freedom we bring you unique pieces of art, as
+            NFTs, that will stir your sense of liberty and bring about the
+            beginning of a grand movement. This is your chance to create value
+            for yourself and the world - get your WDW NFTs and play your part in
+            the{" "}
+            <span
+              style={{
+                background: "url(/images/about/revolution.png) no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                padding: "26px 21px 0px 0px",
+              }}>
+              evolution.
+            </span>
+          </p>
         </Col>
         <Col xs={{ order: 1 }} lg={{ span: 8, order: 2 }}>
           <img src={aboutCard} alt="Vandalism" className={styles.image} />

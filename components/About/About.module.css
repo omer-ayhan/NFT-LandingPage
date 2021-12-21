@@ -80,11 +80,13 @@
   position: relative;
   color: #7e7e7e;
   font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 .image {
   width: 305px;
   height: auto;
+  margin: 25px 0;
 }
 
 @media (min-width: 992px) and (max-width: 1058px) {
@@ -100,6 +102,13 @@
     left: -619px;
   }
 }
+
+@media (max-width: 600px) {
+  .title {
+    margin-left: 40px;
+  }
+}
+
 @media (max-width: 470px) {
   .image {
     width: 320px;

@@ -9,7 +9,8 @@ import styles from "./Navbar.module.css";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar({ scrolled }) {
-  const { logo, navLinks, socialLinks, rightButton } = contents.navbar;
+  const { logo, navLinks, socialLinks, rightButton, infoImage, bottomArrow } =
+    contents.navbar;
 
   return (
     <div
@@ -21,7 +22,7 @@ export default function Navbar({ scrolled }) {
               position: "fixed",
               top: 0,
               backgroundColor: "rgb(0 0 0 / 90%)",
-              zIndex: 1,
+              zIndex: 121,
             }
           : {}),
         transition: "0.5s ease",
@@ -53,11 +54,7 @@ export default function Navbar({ scrolled }) {
         </Col>
         <Col span={8} className={styles.desktopContainer}>
           <div className={styles.socialLinksContainer}>
-            <img
-              className={styles.info}
-              src="/images/navbar/info.svg"
-              alt="info"
-            />
+            <img className={styles.info} src={infoImage} alt="info" />
 
             {socialLinks.map(({ icon, link }, index) => (
               <span key={`${index}##${icon}`}>
@@ -74,7 +71,7 @@ export default function Navbar({ scrolled }) {
                     />
                     <img
                       className={styles.bottomArrow}
-                      src="/images/navbar/bottom_arrow.svg"
+                      src={bottomArrow}
                       alt="arrow"
                     />
                   </a>

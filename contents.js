@@ -4,6 +4,7 @@ export default {
       url: "/images/navbar/LOGO.svg",
       link: "intro",
     },
+    infoImage: "/images/navbar/info.svg",
     navLinks: [
       {
         name: "Who is Vandal",
@@ -36,6 +37,7 @@ export default {
         icon: "/images/navbar/telegram.svg",
       },
     ],
+    bottomArrow: "/images/navbar/bottom_arrow.svg",
     rightButton: {
       name: "Connect Wallet",
       link: "#about",
@@ -158,5 +160,6 @@ export default {
       },
     ],
     infoImage: "/images/footer/info.svg",
+    rightImage: "/images/footer/twitter.png",
   },
 };

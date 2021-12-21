@@ -7,7 +7,7 @@ import styles from "../Navbar/Navbar.module.css";
 import stylesFooter from "./Footer.module.css";
 
 export default function Footer() {
-  const { socialLinks } = contents.navbar;
+  const { socialLinks, bottomArrow, infoImage, logo } = contents.navbar;
 
   return (
     <div
@@ -24,21 +24,17 @@ export default function Footer() {
           justify="center"
           align="middle">
           <SmoothScroll
-            toId="intro"
+            toId={logo.link}
             duration={1500}
             style={{
               cursor: "pointer",
             }}>
-            <img src="/images/navbar/LOGO.svg" alt="" />
+            <img src={logo.url} alt="" />
           </SmoothScroll>
         </Col>
         <Col xs={{ span: 24 }} lg={{ span: 8 }}>
           <div className={styles.socialLinksContainer}>
-            <img
-              className={styles.info}
-              src="/images/navbar/info.svg"
-              alt="info"
-            />
+            <img className={styles.info} src={infoImage} alt="info" />
 
             {socialLinks.map(({ icon, link }, index) => (
               <span key={`${index}##${icon}`}>
@@ -55,7 +51,7 @@ export default function Footer() {
                     />
                     <img
                       className={stylesFooter.bottomArrow}
-                      src="/images/navbar/bottom_arrow.svg"
+                      src={bottomArrow}
                       alt="arrow"
                     />
                   </a>
@@ -90,7 +86,7 @@ export default function Footer() {
                 style={{
                   width: "70px",
                 }}
-                src="/images/footer/twitter.png"
+                src={contents.footer.rightImage}
                 alt="twitter"
               />
             </a>
