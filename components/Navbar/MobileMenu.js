@@ -7,7 +7,7 @@ import styles from "./Navbar.module.css";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
 
 export default function MobileMenu() {
-  const { navLinks, socialLinks, rightButton } = contents.navbar;
+  const { navLinks, socialLinks, rightButton, bottomArrow } = contents.navbar;
 
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
@@ -79,7 +79,7 @@ export default function MobileMenu() {
                         left: "-35px",
                         height: "60px",
                       }}
-                      src="/images/navbar/bottom_arrow.svg"
+                      src={bottomArrow}
                       alt="arrow"
                     />
                   </a>

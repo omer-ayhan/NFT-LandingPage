@@ -25,7 +25,7 @@ export default {
     ],
     socialLinks: [
       {
-        link: "https://www.google.com",
+        link: "https://keybase.io/",
         icon: "/images/navbar/keybase.png",
       },
       {

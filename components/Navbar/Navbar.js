@@ -1,7 +1,5 @@
-import { Button, Col, Drawer, Row } from "antd";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { MenuOutlined } from "@ant-design/icons";
+import { Col, Row } from "antd";
+import React from "react";
 
 import contents from "../../contents";
 import SmoothScroll from "../ScrollUtils/SmoothScroll";
