@@ -5,8 +5,7 @@ import styles from "./Timer.module.css";
 
 function TimerMain() {
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`${year + 1}-1-1`) - +new Date();
+    const difference = +new Date(`2022-1-1`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
